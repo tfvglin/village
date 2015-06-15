@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+    <class name="lsn.bean.Clothes" table="clothes" catalog="hibernate">
+        <id name="cid" type="java.lang.Integer">
+            <column name="clo_id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="cloth" type="java.lang.String">
+            <column name="cloth" />
+        </property>
+        <many-to-one name="user" class="lsn.bean.User" column="uid" not-null="true"/>
+      
+    </class>
+
+</hibernate-mapping>
